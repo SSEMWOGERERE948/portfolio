@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, X } from 'lucide-react';
+import { Github, Linkedin, Mail, X, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import ProjectCard from "@/components/ProjectCard";
@@ -136,6 +136,14 @@ export default function Home() {
               <Button variant="outline" className="w-full" size="lg" onClick={() => window.open('https://www.linkedin.com/in/trevor-simon-6b6575254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')}>
                 <Linkedin className="mr-2 h-4 w-4" />
                 Connect on LinkedIn
+              </Button>
+              <Button variant="ghost" className="w-full" size="lg">
+                <Phone className="mr-2 h-4 w-4" />
+                +256757251514
+              </Button>
+              <Button variant="ghost" className="w-full" size="lg">
+                <Phone className="mr-2 h-4 w-4" />
+                +256774831232
               </Button>
             </div>
           </Card>
