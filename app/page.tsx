@@ -143,7 +143,7 @@ export default function Home() {
               </Button>
               <Button variant="ghost" className="w-full" size="lg">
                 <Phone className="mr-2 h-4 w-4" />
-                +256774831232
+                +256774831231
               </Button>
             </div>
           </Card>
