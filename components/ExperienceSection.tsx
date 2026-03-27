@@ -8,28 +8,78 @@ export default function ExperienceSection() {
   return (
     <section className="py-20 bg-background" id="experience" data-aos="fade-up">
       <div className="container px-4 mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center" data-aos="fade-up" data-aos-delay="200">Professional Experience</h2>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p
+              className="text-sm font-medium tracking-[0.2em] uppercase text-primary mb-3"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Experience
+            </p>
+            <h2
+              className="text-3xl md:text-4xl font-bold tracking-tight"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Professional Experience
+            </h2>
+            <p
+              className="text-muted-foreground mt-4 max-w-2xl mx-auto"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              A progression from internships and freelance delivery to
+              enterprise software development and product ownership.
+            </p>
+          </div>
+
           <div className="space-y-8">
             {experiences.map((experience, index) => (
-              <Card key={index} className="p-6" data-aos="fade-up" data-aos-delay={400 + (index * 200)}>
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+              <Card
+                key={index}
+                className="p-6 md:p-8 rounded-2xl border-border/60 shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-aos="fade-up"
+                data-aos-delay={400 + index * 150}
+              >
+                <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between mb-5">
                   <div>
-                    <h3 className="text-xl font-semibold">{experience.role}</h3>
-                    <p className="text-muted-foreground">{experience.company}</p>
+                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight">
+                      {experience.role}
+                    </h3>
+                    <p className="text-muted-foreground mt-1">
+                      {experience.company}
+                    </p>
                   </div>
-                  <div className="mt-2 md:mt-0">
-                    <Badge variant="secondary">{experience.period}</Badge>
-                  </div>
+
+                  <Badge variant="secondary" className="w-fit text-sm px-3 py-1">
+                    {experience.period}
+                  </Badge>
                 </div>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+
+                <ul className="space-y-3 text-muted-foreground leading-7">
                   {experience.achievements.map((achievement, i) => (
-                    <li key={i} data-aos="fade-up" data-aos-delay={600 + (i * 100)}>{achievement}</li>
+                    <li
+                      key={i}
+                      className="flex items-start gap-3"
+                      data-aos="fade-up"
+                      data-aos-delay={550 + i * 80}
+                    >
+                      <span className="mt-2 h-2 w-2 rounded-full bg-primary shrink-0" />
+                      <span>{achievement}</span>
+                    </li>
                   ))}
                 </ul>
-                <div className="mt-4 flex flex-wrap gap-2">
+
+                <div className="mt-6 flex flex-wrap gap-2">
                   {experience.technologies.map((tech, i) => (
-                    <Badge key={tech} variant="outline" data-aos="fade-up" data-aos-delay={800 + (i * 50)}>
+                    <Badge
+                      key={tech}
+                      variant="outline"
+                      className="rounded-full"
+                      data-aos="fade-up"
+                      data-aos-delay={700 + i * 40}
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -42,4 +92,3 @@ export default function ExperienceSection() {
     </section>
   );
 }
-
